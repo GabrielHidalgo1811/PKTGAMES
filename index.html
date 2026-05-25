@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PKT.Games — Entretención Premium a tu Medida</title>
+  <meta name="description" content="Fábrica de Mesas de Pool, Taca Tacas y Arcades profesionales. Despacho directo a tu hogar. Sin abono, paga al recibir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="pkt_games_logo_refinado-removebg-preview.png" alt="PKT.Games" class="logo-img" />
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#proceso">Cómo Comprar</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+      </ul>
+      <button class="nav-cta" onclick="openWhatsApp('Hola PKT.Games, me interesa conocer su catálogo.')">WhatsApp</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-carousel" id="heroCarousel">
+      <img src="img_pool.png" class="carousel-slide active" alt="Mesa de Pool" />
+      <img src="img_tacataca.png" class="carousel-slide" alt="Taca Taca" />
+      <img src="img_rana.png" class="carousel-slide" alt="Juego de la Rana" />
+      <img src="img_arcade.png" class="carousel-slide" alt="Arcade" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="trust-badge">SIN ABONO — PAGA AL RECIBIR</div>
+      <h1 class="hero-title">PKT<span class="gold">.</span>Games</h1>
+      <p class="hero-subtitle">Entretención Premium a tu Medida</p>
+      <p class="hero-desc">Fabricantes de Mesas de Pool, Taca Tacas y Arcades profesionales.<br>Despacho directo a tu hogar en todo Chile.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn-gold">Explorar Catálogo</a>
+        <a href="#proceso" class="btn-outline">Cómo Funciona</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Pago al recibir</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">Chile</span><span class="stat-label">Despacho nacional</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">★ 5.0</span><span class="stat-label">Calidad premium</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </section>
+
+  <!-- PRODUCTOS — MÓDULOS -->
+  <section class="productos-section" id="productos">
+    <div class="section-header">
+      <p class="section-eyebrow">Nuestro Catálogo</p>
+      <h2 class="section-title">Productos <span class="gold">Premium</span></h2>
+      <p class="section-sub">Selecciona una categoría para explorar</p>
+    </div>
+
+    <div class="modules-grid">
+
+      <!-- MÓDULO POOL -->
+      <div class="module-card" onclick="openModal('modal-pool')" role="button" tabindex="0" aria-label="Ver Mesas de Pool">
+        <div class="module-img-wrap">
+          <img src="img_pool.png" alt="Mesa de Pool PKT" class="module-img" />
+          <div class="module-overlay"></div>
+        </div>
+        <div class="module-info">
+          <p class="module-eyebrow">Disponible</p>
+          <h3 class="module-title">Mesa de Pool</h3>
+          <p class="module-price">Desde $340.000</p>
+          <span class="module-cta">Ver Modelos →</span>
+        </div>
+      </div>
+
+      <!-- MÓDULO TACA TACA -->
+      <div class="module-card" onclick="openModal('modal-taca')" role="button" tabindex="0" aria-label="Ver Taca Taca">
+        <div class="module-img-wrap">
+          <img src="img_tacataca.png" alt="Taca Taca PKT" class="module-img" />
+          <div class="module-overlay"></div>
+        </div>
+        <div class="module-info">
+          <p class="module-eyebrow">Disponible</p>
+          <h3 class="module-title">Taca Taca</h3>
+          <p class="module-price">$220.000</p>
+          <span class="module-cta">Ver Detalle →</span>
+        </div>
+      </div>
+
+      <!-- MÓDULO RANA -->
+      <div class="module-card" onclick="openModal('modal-rana')" role="button" tabindex="0" aria-label="Ver Juego de la Rana">
+        <div class="module-img-wrap">
+          <img src="img_rana.png" alt="Juego de la Rana PKT" class="module-img" />
+          <div class="module-overlay"></div>
+        </div>
+        <div class="module-info">
+          <p class="module-eyebrow">Próximamente</p>
+          <h3 class="module-title">Rana</h3>
+          <p class="module-price">Consultar precio</p>
+          <span class="module-cta">Ver Detalle →</span>
+        </div>
+      </div>
+
+      <!-- MÓDULO ARCADE -->
+      <div class="module-card module-coming" onclick="openModal('modal-arcade')" role="button" tabindex="0" aria-label="Ver Arcades">
+        <div class="module-img-wrap">
+          <img src="img_arcade.png" alt="Arcade PKT" class="module-img" />
+          <div class="module-overlay"></div>
+        </div>
+        <div class="module-info">
+          <p class="module-eyebrow">Próximamente</p>
+          <h3 class="module-title">Arcade</h3>
+          <p class="module-price">Diseños a medida</p>
+          <span class="module-cta">Consultar →</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== MODALES ========== -->
+
+  <!-- MODAL POOL -->
+  <div class="modal-backdrop" id="modal-pool" onclick="closeModalOutside(event,'modal-pool')">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-pool-title">
+      <button class="modal-close" onclick="closeModal('modal-pool')" aria-label="Cerrar">&times;</button>
+      <div class="modal-header">
+        <img src="img_pool.png" alt="Mesa de Pool" class="modal-hero-img" />
+        <div class="modal-header-text">
+          <p class="modal-eyebrow">Catálogo</p>
+          <h2 class="modal-title" id="modal-pool-title">Mesas de Pool</h2>
+          <p class="modal-subtitle">Fabricación propia — Calidad profesional</p>
+        </div>
+      </div>
+      <div class="modal-products">
+
+        <div class="modal-product">
+          <div class="modal-product-top">
+            <div><h3 class="modal-product-name">Poolinas</h3><p class="modal-product-sub">Mesa de Pool para el Hogar</p></div>
+            <div class="modal-product-price">$340.000</div>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="modal-spec"><span class="spec-label">Medidas</span><span>188 × 100 × 83 cm</span></div>
+            <div class="modal-spec"><span class="spec-label">Material</span><span>MDF alta densidad</span></div>
+            <div class="modal-spec"><span class="spec-label">Estructura</span><span>Madera Raulí</span></div>
+            <div class="modal-spec"><span class="spec-label">Paño</span><span>Verde, Rojo o Azul</span></div>
+          </div>
+          <div class="modal-includes">
+            <span class="includes-label">Incluye:</span>
+            <span>Bolas oficiales</span><span>2 tacos</span><span>2 tizas</span><span>Cuenta pillo</span>
+          </div>
+          <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa reservar la Mesa Poolinas ($340.000). ¿Me indican los detalles de entrega?')">Reservar por WhatsApp</button>
+        </div>
+
+        <div class="modal-product featured-modal">
+          <div class="modal-badge">Popular</div>
+          <div class="modal-product-top">
+            <div><h3 class="modal-product-name">Mesa de Pool Profesional</h3><p class="modal-product-sub">8 Pies</p></div>
+            <div class="modal-product-price">$440.000</div>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="modal-spec"><span class="spec-label">Medidas</span><span>220 × 120 × 83 cm</span></div>
+            <div class="modal-spec"><span class="spec-label">Madera</span><span>Negro o Raulí</span></div>
+            <div class="modal-spec"><span class="spec-label">Paño</span><span>Verde, Rojo o Azul</span></div>
+          </div>
+          <div class="modal-includes">
+            <span class="includes-label">Incluye:</span>
+            <span>Bolas oficiales</span><span>2 tacos</span><span>2 tizas</span><span>Pillero</span>
+          </div>
+          <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa reservar la Mesa de Pool Profesional 8 Pies ($440.000). ¿Me indican los detalles de entrega?')">Reservar por WhatsApp</button>
+        </div>
+
+        <div class="modal-product">
+          <div class="modal-product-top">
+            <div><h3 class="modal-product-name">Mesa de Pool Profesional</h3><p class="modal-product-sub">9 Pies</p></div>
+            <div class="modal-product-price">$540.000</div>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="modal-spec"><span class="spec-label">Medidas</span><span>248 × 137 × 83 cm</span></div>
+            <div class="modal-spec"><span class="spec-label">Madera</span><span>Negro o Raulí</span></div>
+            <div class="modal-spec"><span class="spec-label">Paño</span><span>Verde, Rojo o Azul</span></div>
+          </div>
+          <div class="modal-includes">
+            <span class="includes-label">Incluye:</span>
+            <span>Bolas oficiales</span><span>2 tacos</span><span>2 tizas</span><span>Pillero</span>
+          </div>
+          <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa reservar la Mesa de Pool Profesional 9 Pies ($540.000). ¿Me indican los detalles de entrega?')">Reservar por WhatsApp</button>
+        </div>
+
+      </div>
+      <div class="modal-note">Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong></div>
+    </div>
+  </div>
+
+  <!-- MODAL TACA TACA -->
+  <div class="modal-backdrop" id="modal-taca" onclick="closeModalOutside(event,'modal-taca')">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-taca-title">
+      <button class="modal-close" onclick="closeModal('modal-taca')" aria-label="Cerrar">&times;</button>
+      <div class="modal-header">
+        <img src="img_tacataca.png" alt="Taca Taca" class="modal-hero-img" />
+        <div class="modal-header-text">
+          <p class="modal-eyebrow">Disponible</p>
+          <h2 class="modal-title" id="modal-taca-title">Taca Taca</h2>
+          <p class="modal-subtitle">Estructura profesional — Aluminio y madera</p>
+        </div>
+      </div>
+      <div class="modal-products">
+        <div class="modal-product featured-modal">
+          <div class="modal-product-top">
+            <div><h3 class="modal-product-name">Taca Taca Profesional</h3><p class="modal-product-sub">Tamaño estándar profesional</p></div>
+            <div class="modal-product-price">$220.000</div>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="modal-spec"><span class="spec-label">Estructura</span><span>Madera ultra resistente</span></div>
+            <div class="modal-spec"><span class="spec-label">Jugadores</span><span>Aluminio pintado</span></div>
+            <div class="modal-spec"><span class="spec-label">Tamaño</span><span>Estándar profesional</span></div>
+          </div>
+          <div class="modal-includes">
+            <span class="includes-label">Incluye:</span>
+            <span>5 balones oficiales</span>
+          </div>
+          <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa reservar el Taca Taca Profesional ($220.000). ¿Me indican los detalles de entrega?')">Reservar por WhatsApp</button>
+        </div>
+      </div>
+      <div class="modal-note">Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong></div>
+    </div>
+  </div>
+
+  <!-- MODAL RANA -->
+  <div class="modal-backdrop" id="modal-rana" onclick="closeModalOutside(event,'modal-rana')">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-rana-title">
+      <button class="modal-close" onclick="closeModal('modal-rana')" aria-label="Cerrar">&times;</button>
+      <div class="modal-header">
+        <img src="img_rana.png" alt="Juego de la Rana" class="modal-hero-img" />
+        <div class="modal-header-text">
+          <p class="modal-eyebrow">Próximamente</p>
+          <h2 class="modal-title" id="modal-rana-title">Juego de la Rana</h2>
+          <p class="modal-subtitle">Madera noble pulida — Herrajes de bronce</p>
+        </div>
+      </div>
+      <div class="modal-products">
+        <div class="modal-product">
+          <div class="modal-product-top">
+            <div><h3 class="modal-product-name">Rana Tradicional Profesional</h3><p class="modal-product-sub">Versión premium con acabados de bronce</p></div>
+            <div class="modal-product-price" style="font-size:1.3rem">Próximamente</div>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="modal-spec"><span class="spec-label">Estructura</span><span>Madera noble pulida</span></div>
+            <div class="modal-spec"><span class="spec-label">Herrajes</span><span>Bronce de alta calidad</span></div>
+          </div>
+          <p style="color:var(--text-muted);font-size:.88rem;line-height:1.8;margin-bottom:1.2rem;">Consúltanos por el estado de disponibilidad y reserva tu unidad anticipada.</p>
+          <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa el Juego de la Rana Profesional. ¿Cuándo estará disponible?')">Consultar Disponibilidad</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ARCADE -->
+  <div class="modal-backdrop" id="modal-arcade" onclick="closeModalOutside(event,'modal-arcade')">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-arcade-title">
+      <button class="modal-close" onclick="closeModal('modal-arcade')" aria-label="Cerrar">&times;</button>
+      <div class="modal-header">
+        <img src="img_arcade.png" alt="Arcade PKT" class="modal-hero-img" />
+        <div class="modal-header-text">
+          <p class="modal-eyebrow">Próximamente</p>
+          <h2 class="modal-title" id="modal-arcade-title">Máquinas Arcade</h2>
+          <p class="modal-subtitle">Multijuegos PKT — Diseños personalizados</p>
+        </div>
+      </div>
+      <div class="modal-products">
+        <div class="modal-product">
+          <div class="modal-product-top">
+            <div><h3 class="modal-product-name">Máquinas Arcade Multijuegos PKT</h3><p class="modal-product-sub">Catálogo completo próximamente</p></div>
+          </div>
+          <p style="color:var(--text-muted);font-size:.88rem;line-height:1.8;margin-bottom:1.2rem;">Consúltanos por diseños personalizados y catálogo de juegos. Fabricamos a medida con los mejores materiales y tecnología.</p>
+          <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa conocer sus Máquinas Arcade. ¿Cuándo estarán disponibles?')">Consultar Disponibilidad</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESO DE COMPRA -->
+  <section class="proceso-section" id="proceso">
+    <div class="section-header">
+      <p class="section-eyebrow">Sin Riesgo</p>
+      <h2 class="section-title">Compra <span class="gold">100% Segura</span></h2>
+      <p class="section-sub">Así de simple y sin compromisos previos</p>
+    </div>
+    <div class="proceso-steps">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Eliges tu Producto</h3>
+        <p>Selecciona el modelo que más te guste y personaliza los colores de madera y paño a tu gusto.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Coordinas la Entrega</h3>
+        <p>Solo nos envías tu dirección y teléfono para agendar. <strong>¡Sin abonos ni transferencias previas!</strong></p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Recibes y Pagas</h3>
+        <p>Recibes en tu domicilio, revisas el producto con calma y pagas al instante de forma segura.</p>
+      </div>
+    </div>
+    <div class="trust-banner">
+      <p><strong>SIN ABONO — SIN TRANSFERENCIAS PREVIAS — PAGA AL RECIBIR</strong><br>Tu satisfacción está garantizada antes de pagar un solo peso.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="pkt_games_logo_refinado-removebg-preview.png" alt="PKT.Games" class="footer-logo" />
+        <p>Entretención Premium a tu Medida.<br>Fabricantes de juegos profesionales en Chile.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Categorías</h4>
+        <ul>
+          <li><a href="#productos" onclick="openModal('modal-pool')">Mesas de Pool</a></li>
+          <li><a href="#productos" onclick="openModal('modal-taca')">Taca Taca</a></li>
+          <li><a href="#productos" onclick="openModal('modal-arcade')">Arcades</a></li>
+          <li><a href="#productos" onclick="openModal('modal-rana')">Ranas</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>Escríbenos directamente por WhatsApp para cotizaciones, detalles de producto o coordinar tu entrega.</p>
+        <div class="contact-info">
+          <p><span class="contact-icon">📞</span> <a href="tel:+56972128346" class="contact-link">+56 9 7212 8346</a></p>
+          <p><span class="contact-icon">📸</span> <a href="https://instagram.com/pkt.games" target="_blank" class="contact-link">@pkt.games</a></p>
+        </div>
+        <button class="btn-gold" onclick="openWhatsApp('Hola PKT.Games, me gustaría obtener más información sobre sus productos.')">Contactar por WhatsApp</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 PKT.Games — Todos los derechos reservados.</p>
+      <p class="footer-tagline">Hecho con ♦ en Chile</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <button class="whatsapp-float" id="waFloat" onclick="openWhatsApp('Hola PKT.Games, me interesa conocer su catálogo de productos.')" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="wa-label">+56 9 7212 8346</span>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
