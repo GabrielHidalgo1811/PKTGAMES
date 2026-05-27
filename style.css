@@ -737,6 +737,37 @@ body::before {
 .trust-banner span { font-size: 2rem; flex-shrink: 0; }
 .trust-banner p { font-size: .88rem; color: var(--text-muted); line-height: 1.7; }
 .trust-banner p strong { color: var(--gold); font-size: .95rem; display: block; margin-bottom: .3rem; }
+/* ========== QUIÉNES SOMOS ========== */
+.about-section {
+  padding: 5rem 2rem;
+  background: #0a0104;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.about-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(212,175,55,0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 4.5rem 3rem;
+  backdrop-filter: blur(8px);
+}
+.about-text {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  letter-spacing: .02em;
+}
+.about-text strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .about-inner { padding: 3rem 1.5rem; }
+  .about-text { font-size: 1rem; }
+}
 
 /* ========== FOOTER ========== */
 .footer {
