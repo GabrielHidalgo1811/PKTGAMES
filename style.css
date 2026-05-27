@@ -224,10 +224,11 @@ body::before {
 }
 
 .hero-subtitle {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 500;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  letter-spacing: .15em;
   color: var(--white);
   line-height: 1.2;
   margin: .5rem 0 1.5rem;
