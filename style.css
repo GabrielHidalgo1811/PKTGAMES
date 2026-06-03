@@ -1069,12 +1069,15 @@ body::before {
 }
 
 .modal-carousel-wrap {
-  width: 150px;
-  height: 150px;
+  width: auto;
+  margin: 1.5rem 2rem 0;
+  height: clamp(200px, 35vh, 320px);
   position: relative;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--glass-border);
 }
 .modal-carousel-inner {
   position: relative;
@@ -1102,16 +1105,16 @@ body::before {
   background: rgba(0,0,0,0.6);
   color: white;
   border: 1px solid var(--glass-border);
-  width: 24px; height: 24px;
+  width: 36px; height: 36px;
   border-radius: 50%;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  font-size: 10px;
+  font-size: 14px;
   z-index: 3;
   transition: all var(--transition);
 }
-.modal-carousel-btn.prev { left: 4px; }
-.modal-carousel-btn.next { right: 4px; }
+.modal-carousel-btn.prev { left: 1rem; }
+.modal-carousel-btn.next { right: 1rem; }
 .modal-carousel-btn:hover { background: var(--gold); color: black; }
 .modal-arcade-icon {
   font-family: 'Bebas Neue', sans-serif;
