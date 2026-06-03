@@ -7,13 +7,69 @@ function openWhatsApp(message) {
   window.open(url, '_blank', 'noopener,noreferrer');
 }
 
+// ========== MODAL CAROUSELS ==========
+let modalCarouselIntervals = {};
+
+function startModalCarousel(id) {
+  stopModalCarousel(id);
+  modalCarouselIntervals[id] = setInterval(() => {
+    nextModalSlide(id);
+  }, 5000);
+}
+
+function stopModalCarousel(id) {
+  if (modalCarouselIntervals[id]) {
+    clearInterval(modalCarouselIntervals[id]);
+    delete modalCarouselIntervals[id];
+  }
+}
+
+function nextModalSlide(id) {
+  const wrap = document.getElementById(id);
+  if (!wrap) return;
+  const slides = wrap.querySelectorAll('.modal-carousel-slide');
+  if (slides.length <= 1) return;
+  
+  let activeIndex = 0;
+  slides.forEach((slide, i) => {
+    if (slide.classList.contains('active')) activeIndex = i;
+    slide.classList.remove('active');
+  });
+  
+  const nextIndex = (activeIndex + 1) % slides.length;
+  slides[nextIndex].classList.add('active');
+  
+  startModalCarousel(id);
+}
+
+function prevModalSlide(id) {
+  const wrap = document.getElementById(id);
+  if (!wrap) return;
+  const slides = wrap.querySelectorAll('.modal-carousel-slide');
+  if (slides.length <= 1) return;
+  
+  let activeIndex = 0;
+  slides.forEach((slide, i) => {
+    if (slide.classList.contains('active')) activeIndex = i;
+    slide.classList.remove('active');
+  });
+  
+  const prevIndex = (activeIndex - 1 + slides.length) % slides.length;
+  slides[prevIndex].classList.add('active');
+  
+  startModalCarousel(id);
+}
+
 // ========== MODALES ==========
 function openModal(id) {
   const modal = document.getElementById(id);
   if (!modal) return;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
-  // Focus trap: move focus to close button
+  
+  const carousel = modal.querySelector('.modal-carousel-wrap');
+  if (carousel) startModalCarousel(carousel.id);
+  
   const closeBtn = modal.querySelector('.modal-close');
   if (closeBtn) setTimeout(() => closeBtn.focus(), 100);
 }
@@ -23,6 +79,9 @@ function closeModal(id) {
   if (!modal) return;
   modal.classList.remove('open');
   document.body.style.overflow = '';
+  
+  const carousel = modal.querySelector('.modal-carousel-wrap');
+  if (carousel) stopModalCarousel(carousel.id);
 }
 
 function closeModalOutside(event, id) {

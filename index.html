@@ -149,7 +149,16 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-poker-title">
       <button class="modal-close" onclick="closeModal('modal-poker')" aria-label="Cerrar">&times;</button>
       <div class="modal-header">
-        <img src="img_poker.png" alt="Mesa de Poker" class="modal-hero-img" />
+        <div class="modal-carousel-wrap" id="carousel-poker">
+          <div class="modal-carousel-inner">
+            <img src="Poker/Mesapool1.png" alt="Mesa de Poker 1" class="modal-carousel-slide active" />
+            <img src="Poker/Mesapool2.png" alt="Mesa de Poker 2" class="modal-carousel-slide" />
+            <img src="Poker/Mesapool3.png" alt="Mesa de Poker 3" class="modal-carousel-slide" />
+            <img src="Poker/Mesapool4.png" alt="Mesa de Poker 4" class="modal-carousel-slide" />
+          </div>
+          <button class="modal-carousel-btn prev" onclick="prevModalSlide('carousel-poker')">❮</button>
+          <button class="modal-carousel-btn next" onclick="nextModalSlide('carousel-poker')">❯</button>
+        </div>
         <div class="modal-header-text">
           <p class="modal-eyebrow">Catálogo</p>
           <h2 class="modal-title" id="modal-poker-title">Mesas de Poker</h2>
@@ -174,7 +183,10 @@
           <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa reservar la Mesa de Poker Hexagonal ($490.000). ¿Me indican los detalles de entrega?')">Reservar por WhatsApp</button>
         </div>
       </div>
-      <div class="modal-note">Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong></div>
+      <div class="modal-note">
+        Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong><br>
+        <span style="display:block;margin-top:.4rem;color:var(--gold);font-size:.8rem;">Garantía: Solo cubren los problemas que vienen de fábrica.</span>
+      </div>
     </div>
   </div>
 
@@ -183,7 +195,15 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-pool-title">
       <button class="modal-close" onclick="closeModal('modal-pool')" aria-label="Cerrar">&times;</button>
       <div class="modal-header">
-        <img src="img_pool.png" alt="Mesa de Pool" class="modal-hero-img" />
+        <div class="modal-carousel-wrap" id="carousel-pool">
+          <div class="modal-carousel-inner">
+            <img src="Pool/Pool1.png" alt="Mesa de Pool 1" class="modal-carousel-slide active" />
+            <img src="Pool/Pool2.png" alt="Mesa de Pool 2" class="modal-carousel-slide" />
+            <img src="Pool/Pool3.png" alt="Mesa de Pool 3" class="modal-carousel-slide" />
+          </div>
+          <button class="modal-carousel-btn prev" onclick="prevModalSlide('carousel-pool')">❮</button>
+          <button class="modal-carousel-btn next" onclick="nextModalSlide('carousel-pool')">❯</button>
+        </div>
         <div class="modal-header-text">
           <p class="modal-eyebrow">Catálogo</p>
           <h2 class="modal-title" id="modal-pool-title">Mesas de Pool</h2>
@@ -246,7 +266,10 @@
         </div>
 
       </div>
-      <div class="modal-note">Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong></div>
+      <div class="modal-note">
+        Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong><br>
+        <span style="display:block;margin-top:.4rem;color:var(--gold);font-size:.8rem;">Garantía: Solo cubren los problemas que vienen de fábrica.</span>
+      </div>
     </div>
   </div>
 
@@ -255,7 +278,15 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-taca-title">
       <button class="modal-close" onclick="closeModal('modal-taca')" aria-label="Cerrar">&times;</button>
       <div class="modal-header">
-        <img src="img_tacataca.png" alt="Taca Taca" class="modal-hero-img" />
+        <div class="modal-carousel-wrap" id="carousel-taca">
+          <div class="modal-carousel-inner">
+            <img src="Tacataca/Taca1.png" alt="Taca Taca 1" class="modal-carousel-slide active" />
+            <img src="Tacataca/Taca2.png" alt="Taca Taca 2" class="modal-carousel-slide" />
+            <img src="Tacataca/Taca3.png" alt="Taca Taca 3" class="modal-carousel-slide" />
+          </div>
+          <button class="modal-carousel-btn prev" onclick="prevModalSlide('carousel-taca')">❮</button>
+          <button class="modal-carousel-btn next" onclick="nextModalSlide('carousel-taca')">❯</button>
+        </div>
         <div class="modal-header-text">
           <p class="modal-eyebrow">Disponible</p>
           <h2 class="modal-title" id="modal-taca-title">Taca Taca</h2>
@@ -280,7 +311,10 @@
           <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa reservar el Taca Taca Profesional ($220.000). ¿Me indican los detalles de entrega?')">Reservar por WhatsApp</button>
         </div>
       </div>
-      <div class="modal-note">Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong></div>
+      <div class="modal-note">
+        Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong><br>
+        <span style="display:block;margin-top:.4rem;color:var(--gold);font-size:.8rem;">Garantía: Solo cubren los problemas que vienen de fábrica.</span>
+      </div>
     </div>
   </div>
 
@@ -289,7 +323,15 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-rana-title">
       <button class="modal-close" onclick="closeModal('modal-rana')" aria-label="Cerrar">&times;</button>
       <div class="modal-header">
-        <img src="img_rana.png" alt="Juego de la Rana" class="modal-hero-img" />
+        <div class="modal-carousel-wrap" id="carousel-rana">
+          <div class="modal-carousel-inner">
+            <img src="Rana/Rana1.png" alt="Juego de la Rana 1" class="modal-carousel-slide active" />
+            <img src="Rana/Rana2.png" alt="Juego de la Rana 2" class="modal-carousel-slide" />
+            <img src="Rana/Rana3.png" alt="Juego de la Rana 3" class="modal-carousel-slide" />
+          </div>
+          <button class="modal-carousel-btn prev" onclick="prevModalSlide('carousel-rana')">❮</button>
+          <button class="modal-carousel-btn next" onclick="nextModalSlide('carousel-rana')">❯</button>
+        </div>
         <div class="modal-header-text">
           <p class="modal-eyebrow">Próximamente</p>
           <h2 class="modal-title" id="modal-rana-title">Juego de la Rana</h2>
@@ -310,6 +352,10 @@
           <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa el Juego de la Rana Profesional. ¿Cuándo estará disponible?')">Consultar Disponibilidad</button>
         </div>
       </div>
+      <div class="modal-note">
+        Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong><br>
+        <span style="display:block;margin-top:.4rem;color:var(--gold);font-size:.8rem;">Garantía: Solo cubren los problemas que vienen de fábrica.</span>
+      </div>
     </div>
   </div>
 
@@ -318,7 +364,14 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-arcade-title">
       <button class="modal-close" onclick="closeModal('modal-arcade')" aria-label="Cerrar">&times;</button>
       <div class="modal-header">
-        <img src="img_arcade.png" alt="Arcade PKT" class="modal-hero-img" />
+        <div class="modal-carousel-wrap" id="carousel-arcade">
+          <div class="modal-carousel-inner">
+            <img src="Arcade/Arcade1.png" alt="Arcade PKT 1" class="modal-carousel-slide active" />
+            <img src="Arcade/Arcade2.png" alt="Arcade PKT 2" class="modal-carousel-slide" />
+          </div>
+          <button class="modal-carousel-btn prev" onclick="prevModalSlide('carousel-arcade')">❮</button>
+          <button class="modal-carousel-btn next" onclick="nextModalSlide('carousel-arcade')">❯</button>
+        </div>
         <div class="modal-header-text">
           <p class="modal-eyebrow">Catálogo</p>
           <h2 class="modal-title" id="modal-arcade-title">Máquinas Arcade</h2>
@@ -343,7 +396,10 @@
           <button class="btn-whatsapp" onclick="openWhatsApp('Hola PKT.Games, me interesa reservar una Máquina Arcade ($290.000). ¿Me indican los detalles para personalizar el diseño y la entrega?')">Reservar por WhatsApp</button>
         </div>
       </div>
-      <div class="modal-note">Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong></div>
+      <div class="modal-note">
+        Reserva solo con tu dirección y teléfono. <strong>Sin abono — Paga al recibir.</strong><br>
+        <span style="display:block;margin-top:.4rem;color:var(--gold);font-size:.8rem;">Garantía: Solo cubren los problemas que vienen de fábrica.</span>
+      </div>
     </div>
   </div>
 
@@ -374,7 +430,7 @@
       </div>
     </div>
     <div class="trust-banner">
-      <p><strong>SIN ABONO — SIN TRANSFERENCIAS PREVIAS — PAGA AL RECIBIR</strong><br>Tu satisfacción está garantizada antes de pagar un solo peso.</p>
+      <p><strong>SIN ABONO — SIN TRANSFERENCIAS PREVIAS — PAGA AL RECIBIR</strong><br>Tu satisfacción está garantizada antes de pagar un solo peso. <br><span style="color:var(--gold);">Garantía: Solo cubren los problemas que vienen de fábrica.</span></p>
     </div>
   </section>
 
